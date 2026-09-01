@@ -121,3 +121,9 @@ yarn-error.log*
 dist/
 out/
 *.map
+
+
+.env
+.PSI/
+__pycache__/
+*.pyc
