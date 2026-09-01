@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analyze Problem | PSI</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Analyze CSS -->
+    <link rel="stylesheet" href="/static/css/analyze.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo-section">
+            <div class="logo"></div>
+            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo">
+            <div>
+                <h3>Problem Solving Intelligence</h3>
+                <p>Think Better. Solve Smarter.</p>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="/">
+                🏠Home
+            </a>
+
+            <a href="/analyze" class="active">
+                🔍Analyze
+            </a>
+
+            <a href="/profile" >
+                👤Profile
+            </a>
+
+            <button class="profile-btn">
+                👤My Profile
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- Page Heading -->
+
+        <section class="page-heading">
+
+            <div class="analysis-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <div>
+                <p class="small-title">AI PROBLEM ANALYSIS</p>
+
+                <h1>
+                    Understand Your
+                    <span>Problem.</span>
+                </h1>
+
+                <p class="description">
+                    PSI analyzes your problem, breaks it down,
+                    evaluates possible approaches, and creates
+                    a practical action plan.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROBLEM CARD ================= -->
+
+        <section class="problem-card">
+
+            <div class="card-header">
+
+                <div class="title-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div>
+                    <h2>Your Problem</h2>
+                    <p>The problem you want PSI to analyze</p>
+                </div>
+
+                <span class="status">
+                    <i class="fa-solid fa-circle"></i>
+                    Analyzing
+                </span>
+
+            </div>
+
+
+            <div class="problem-box">
+
+                <p id="problemText">
+                    I want to build a student attendance system
+                    for my college. I have limited time and only
+                    know Python.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROBLEM DETAILS ================= -->
+
+        <section class="details-grid">
+
+            <div class="detail-card">
+
+                <div class="detail-icon goal">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div>
+                    <span>GOAL</span>
+                    <h3>Build an attendance system</h3>
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <div class="detail-icon time">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <div>
+                    <span>TIME CONSTRAINT</span>
+                    <h3>Limited time</h3>
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <div class="detail-icon skill">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <span>SKILL LEVEL</span>
+                    <h3>Beginner</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AI ANALYSIS ================= -->
+
+        <section class="analysis-section">
+
+            <div class="section-title">
+
+                <span>
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <div>
+                    <p>PSI THINKING PROCESS</p>
+                    <h2>AI Analysis</h2>
+                </div>
+
+            </div>
+
+
+            <!-- STEP 1 -->
+
+            <div class="analysis-card">
+
+                <div class="step-number">01</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="step-content">
+
+                    <span>UNDERSTAND</span>
+
+                    <h3>
+                        Understanding the Problem
+                    </h3>
+
+                    <p>
+                        The main goal is to create a student
+                        attendance system that can record,
+                        manage, and track student attendance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 2 -->
+
+            <div class="analysis-card">
+
+                <div class="step-number">02</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+
+                <div class="step-content">
+
+                    <span>DECOMPOSE</span>
+
+                    <h3>
+                        Breaking the Problem Down
+                    </h3>
+
+                    <p>
+                        The problem can be divided into smaller
+                        tasks such as student management,
+                        attendance recording, database storage,
+                        and report generation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 3 -->
+
+            <div class="analysis-card">
+
+                <div class="step-number">03</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <div class="step-content">
+
+                    <span>EVALUATE</span>
+
+                    <h3>
+                        Possible Approaches
+                    </h3>
+
+                    <div class="approaches">
+
+                        <div class="approach">
+                            <strong>Approach 1</strong>
+                            <p>Python + SQLite</p>
+                            <small>Simple and beginner friendly</small>
+                        </div>
+
+                        <div class="approach">
+                            <strong>Approach 2</strong>
+                            <p>Python + Web Interface</p>
+                            <small>More flexible and scalable</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 4 -->
+
+            <div class="analysis-card">
+
+                <div class="step-number">04</div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div class="step-content">
+
+                    <span>ACT</span>
+
+                    <h3>
+                        Recommended Action Plan
+                    </h3>
+
+                    <ol class="action-list">
+
+                        <li>
+                            Create the student database.
+                        </li>
+
+                        <li>
+                            Add student registration.
+                        </li>
+
+                        <li>
+                            Build attendance recording.
+                        </li>
+
+                        <li>
+                            Add attendance reports.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINAL RECOMMENDATION ================= -->
+
+        <section class="recommendation">
+
+            <div class="recommendation-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <div>
+
+                <span>PSI RECOMMENDATION</span>
+
+                <h2>
+                    Start with Python + SQLite
+                </h2>
+
+                <p>
+                    This approach is simple for a beginner,
+                    requires fewer resources, and can be
+                    completed within a limited time.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BUTTON ================= -->
+
+        <div class="bottom-actions">
+
+            <a href="/" class="secondary-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back Home
+            </a>
+
+            <button class="primary-btn" id="newAnalysisBtn">
+                <i class="fa-solid fa-plus"></i>
+                Start New Analysis
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        © 2026 Problem Solving Intelligence (PSI) • Tech Eximius 2026
+    </footer>
+
+
+    <!-- Analyze JavaScript -->
+    <script src="/static/js/analyze.js"></script>
+
+</body>
+</html>

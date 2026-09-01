@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(79, 70, 229, 0.12), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.10), transparent 30%),
+        #070b18;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 88px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(7, 11, 24, 0.92);
+    border-bottom: 1px solid #202842;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* LOGO */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+    border-radius: 12px;
+
+    flex-shrink: 0;
+}
+
+.logo-section h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.logo-section p {
+    font-size: 12px;
+    color: #8d98b5;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #aeb7d0;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links a.active {
+    color: #7c6cff;
+}
+
+.nav-links i {
+    font-size: 14px;
+}
+
+
+/* PROFILE BUTTON */
+
+.profile-btn {
+    padding: 12px 20px;
+
+    border: 1px solid #303952;
+    border-radius: 12px;
+
+    background: #0c1224;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    border-color: #6655ff;
+    background: #121832;
+}
+
+
+/* ================= MAIN ================= */
+
+.profile-container {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 70px 0;
+}
+
+
+/* PROFILE HEADER */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+.profile-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #5b3df5,
+        #7c4dff
+    );
+
+    box-shadow: 0 15px 40px rgba(92, 61, 245, 0.3);
+}
+
+.profile-icon i {
+    font-size: 30px;
+}
+
+.small-title {
+    color: #7868ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.profile-header h1 {
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.profile-header h1 span {
+    background: linear-gradient(
+        90deg,
+        #4f7cff,
+        #8b5cf6
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-header p {
+    color: #8f9ab5;
+    font-size: 16px;
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+    background: rgba(15, 21, 40, 0.9);
+
+    border: 1px solid #252d47;
+    border-radius: 22px;
+
+    padding: 35px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 30px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.card-title > i {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #8b7cff;
+    background: rgba(99, 82, 255, 0.15);
+
+    font-size: 20px;
+}
+
+.card-title h2 {
+    font-size: 20px;
+}
+
+.card-title p {
+    color: #7f8aa7;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* INPUT GRID */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.input-box label {
+    color: #9da8c2;
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-box label i {
+    color: #7565ff;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 11px;
+    border: 1px solid #29324d;
+
+    background: #090f20;
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #6858ff;
+    box-shadow: 0 0 0 3px rgba(104, 88, 255, 0.12);
+}
+
+.input-box input::placeholder {
+    color: #59647e;
+}
+
+
+/* SAVE BUTTON */
+
+.save-btn {
+    margin-top: 30px;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #513cf2,
+        #7656ff
+    );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    box-shadow: 0 10px 25px rgba(82, 60, 242, 0.25);
+
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(82, 60, 242, 0.35);
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #0f1528;
+
+    border: 1px solid #252d47;
+    border-radius: 18px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.purple {
+    background: rgba(124, 92, 255, 0.15);
+    color: #8c79ff;
+}
+
+.blue {
+    background: rgba(40, 160, 255, 0.14);
+    color: #40b7ff;
+}
+
+.green {
+    background: rgba(50, 205, 130, 0.14);
+    color: #42d991;
+}
+
+.stat-card h3 {
+    font-size: 24px;
+}
+
+.stat-card p {
+    color: #7f8aa7;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0;
+    }
+
+    .nav-links a i {
+        font-size: 18px;
+    }
+
+    .profile-btn {
+        font-size: 0;
+        padding: 12px;
+    }
+
+    .profile-btn i {
+        font-size: 18px;
+    }
+
+    .profile-header h1 {
+        font-size: 32px;
+    }
+
+    .profile-grid,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}

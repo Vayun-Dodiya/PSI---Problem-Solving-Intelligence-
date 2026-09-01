@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | PSI</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Profile CSS -->
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo-section">
+            <a href="/" class="nav-icon">
+
+                <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo" class="logo-img">
+
+                <div>
+                    <h3>Problem Solving Intelligence</h3>
+                    <p>Think Better. Solve Smarter.</p>
+                </div>
+            </a>
+
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="/">
+                🏠Home
+            </a>
+
+            <a href="/analyze">
+                🔍Analyze
+            </a>
+
+            <a href="/profile" class="active">
+                👤Profile
+            </a>
+
+            <button class="profile-btn">
+                👤My Profile
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="profile-container">
+
+        <section class="profile-header">
+
+            <div class="profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div>
+                <span class="small-title">YOUR PROFILE</span>
+
+                <h1>
+                    Welcome to
+                    <span>PSI.</span>
+                </h1>
+
+                <p>
+                    Manage your profile and personalize your
+                    problem-solving experience.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFILE CARD ================= -->
+
+        <section class="profile-card">
+
+            <div class="card-title">
+                <i class="fa-solid fa-id-card"></i>
+
+                <div>
+                    <h2>Profile Information</h2>
+                    <p>Your personal information</p>
+                </div>
+            </div>
+
+
+            <div class="profile-grid">
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-user"></i>
+                        Full Name
+                    </label>
+
+                    <input type="text" placeholder="Enter your name">
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-envelope"></i>
+                        Email Address
+                    </label>
+
+                    <input type="email" placeholder="Enter your email">
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Skill Level
+                    </label>
+
+                    <select>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label>
+                        <i class="fa-solid fa-code"></i>
+                        Main Interest
+                    </label>
+
+                    <select>
+                        <option>Problem Solving</option>
+                        <option>Programming</option>
+                        <option>Algorithms</option>
+                        <option>Data Structures</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button class="save-btn">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Save Profile
+            </button>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div>
+                    <h3>0</h3>
+                    <p>Problems Analyzed</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+                    <h3>0</h3>
+                    <p>Solutions Explored</p>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div>
+                    <h3>0</h3>
+                    <p>Problems Solved</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/static/js/profile.js"></script>
+
+</body>
+
+</html>

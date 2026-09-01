@@ -1,0 +1,129 @@
+# ================================
+
+# PSI - Problem Solving Intelligence
+
+# Git Ignore File
+
+# ================================
+
+# ----------------
+
+# Environment
+
+# ----------------
+
+.env
+.env.*
+!.env.example
+
+# ----------------
+
+# Python
+
+# ----------------
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+
+*.egg-info/
+dist/
+build/
+
+# ----------------
+
+# IDE / Editors
+
+# ----------------
+
+.vscode/
+.idea/
+
+# ----------------
+
+# OS generated files
+
+# ----------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------
+
+# Logs
+
+# ----------------
+
+*.log
+logs/
+
+# ----------------
+
+# Testing / Coverage
+
+# ----------------
+
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+
+# ----------------
+
+# Temporary files
+
+# ----------------
+
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# ----------------
+
+# Database
+
+# ----------------
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ----------------
+
+# Node.js (if used later)
+
+# ----------------
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------
+
+# Build / Cache
+
+# ----------------
+
+.cache/
+.parcel-cache/
+dist/
+out/
+*.map
+
+
+.env
+.PSI/
+__pycache__/
+*.pyc
