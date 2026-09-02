@@ -5,54 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Problem Solving Intelligence</title>
+    <title>PSI — Problem Solving Intelligence</title>
 
     <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="icon" type="image/png" href="/static/assets/icons/PSI-LOGO-MAIN.png">
+    <link rel="icon" type="image/png" href="/static/assets/icons/PSI-ICON.png">
 </head>
 
 <body>
-    
+
 
     <!-- ================= NAVBAR ================= -->
 
-    <header class="navbar">
+    <nav class="navbar">
 
-        <div class="brand">
-
+        <!-- <a href="/" class="brand">
             <div class="logo">
-            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo">
+                
             </div>
 
             <div class="brand-text">
-                <h2>Problem Solving Intelligence</h2>
-                <p>Think Better. Solve Smarter.</p>
+                <span>
+                    Problem Solving Intelligence
+                </span>
             </div>
+        </a> -->
+        <a href="/" class="nav-left">
+            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo" class="logo">
+            <span>Problem Solving Intelligence</span>
+        </a>
 
+
+        <div class="nav-right">
+            <ul class="nav-opt">
+                <li>
+
+                    <a href="/" class="nav-links">
+                        Home
+                    </a>
+                </li>
+                <li>
+
+                    <a href="/analyze" class="nav-links">
+                        Analyze
+                    </a>
+                </li>
+                <li>
+
+
+                    <a href="/profile" class="nav-links">
+                        Profile
+                    </a>
+                </li>
+                <li>
+
+
+                    <button class="profile-btn">
+                        👤 My Profile
+                    </button>
+
+                </li>
+            </ul>
         </div>
 
-
-        <nav class="nav-links">
-
-            <a href="/" class="active">
-                🏠Home
-            </a>
-
-            <a href="/analyze">
-                🔍Analyze
-            </a>
-
-            <a href="/profile">
-                👤Profile
-            </a>
-
-            <button class="profile-btn">
-                👤 My Profile
-            </button>
-
-        </nav>
-
-    </header>
+    </nav>
 
 
     <!-- ================= HERO SECTION ================= -->
@@ -68,9 +83,8 @@
                 </div>
 
                 <h1>
-                    Related to learning 
-                    <br>
-                     more<span> than solving</span>
+                    More Than Just Solving.
+                    <BR>Learn How to <SPAN> Think.</SPAN>
                 </h1>
 
                 <p class="hero-description">
@@ -116,10 +130,8 @@
                 </div>
 
 
-                <textarea
-                    placeholder="Example: I want to build a student attendance system for my college.
-I have limited time and only know Python..."
-                ></textarea>
+                <textarea placeholder="Example: I want to build a student attendance system for my college.
+I have limited time and only know Python..."></textarea>
 
 
                 <!-- Options -->

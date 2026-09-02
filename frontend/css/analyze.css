@@ -4,82 +4,106 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #070b18;
-    color: #f5f7ff;
-    min-height: 100vh;
+
+    background: #050914;
+
+    color: #ffffff;
+
+    line-height: 1.5;
 }
 
 
-/* ================= NAVBAR ================= */
+::selection {
+    background: #584cfb;
+    color: #010E1D;
+}
+
+/* ==============================
+   NAVBAR
+================================ */
 
 .navbar {
-    height: 78px;
-    padding: 0 6%;
+    width: 100%;
+
+    padding: 18px 6%;
+
     display: flex;
-    align-items: center;
+
+    position: fixed;
+
     justify-content: space-between;
 
-    background: #090e1d;
-    border-bottom: 1px solid #20263a;
+    align-items: center;
+
+    background: #080d1c;
+
+    border-bottom: 1px solid #1c2740;
+
+    z-index: 1000;
+    
 }
 
-.logo-section {
+/* Brand */
+
+.brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #FCFCFC;
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.brand:hover{
+    color: white;
 }
 
 .logo {
     width: 48px;
     height: 48px;
-
+    min-width: 48px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border-radius: 12px;
-    overflow: hidden;
-
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.logo-section > img {
-    width: 48px;
-    height: 48px;
     object-fit: contain;
     border-radius: 12px;
     flex-shrink: 0;
 }
 
-.logo-section h3 {
-    font-size: 15px;
-}
+/* Navigation */
 
-.logo-section p {
-    color: #8e96aa;
-    font-size: 11px;
-    margin-top: 4px;
-}
+.nav-opt {
+    display: flex;
 
+    align-items: center;
+
+    gap: 35px;
+}
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
+    color: #aeb7cc;
 
-.nav-links a {
-    color: #aeb6ca;
     text-decoration: none;
-    font-size: 14px;
+
+    font-size: 15px;
+
+    transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #8065ff;
+.nav-links :hover,
+.nav-links :active {
+    color: #8b7cff;
 }
 
 .nav-links i {

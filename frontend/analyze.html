@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Analyze Problem | PSI</title>
+    <link rel="icon" type="image/png" href="/static/assets/icons/PSI-ICON.png">
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Analyze CSS -->
     <link rel="stylesheet" href="/static/css/analyze.css">
@@ -18,38 +19,58 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <header class="navbar">
+    <nav class="navbar">
 
-        <div class="logo-section">
-            <div class="logo"></div>
-            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo">
-            <div>
-                <h3>Problem Solving Intelligence</h3>
-                <p>Think Better. Solve Smarter.</p>
+        <!-- <a href="/" class="brand">
+            <div class="logo">
+                
             </div>
+
+            <div class="brand-text">
+                <span>
+                    Problem Solving Intelligence
+                </span>
+            </div>
+        </a> -->
+        <a href="/" class="brand">
+            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo" class="logo">
+            <span>Problem Solving Intelligence</span>
+        </a>
+
+
+        <div >
+            <ul class="nav-opt">
+                <li>
+
+                    <a href="/" class="nav-links">
+                        Home
+                    </a>
+                </li>
+                <li>
+
+                    <a href="/analyze" class="active nav-links">
+                        Analyze
+                    </a>
+                </li>
+                <li>
+
+
+                    <a href="/profile" class="nav-links">
+                        Profile
+                    </a>
+                </li>
+                <li>
+
+
+                    <button class="profile-btn">
+                        👤 My Profile
+                    </button>
+
+                </li>
+            </ul>
         </div>
 
-        <nav class="nav-links">
-
-            <a href="/">
-                🏠Home
-            </a>
-
-            <a href="/analyze" class="active">
-                🔍Analyze
-            </a>
-
-            <a href="/profile" >
-                👤Profile
-            </a>
-
-            <button class="profile-btn">
-                👤My Profile
-            </button>
-
-        </nav>
-
-    </header>
+    </nav>
 
 
     <!-- ================= MAIN ================= -->
@@ -384,4 +405,5 @@
     <script src="/static/js/analyze.js"></script>
 
 </body>
+
 </html>
