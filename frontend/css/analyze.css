@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,12 @@ body {
     color: #ffffff;
 
     line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -46,12 +53,12 @@ body {
     border-bottom: 1px solid #1c2740;
 
     z-index: 1000;
-    
+
 }
 
 /* Brand */
 
-.brand {
+.nav-left {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -64,7 +71,13 @@ body {
     letter-spacing: -0.025em;
 }
 
-.brand:hover{
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+}
+
+.nav-left:hover {
     color: white;
 }
 
@@ -85,42 +98,54 @@ body {
 
 .nav-opt {
     display: flex;
-
+    gap: 3rem;
     align-items: center;
 
-    gap: 35px;
+    /* font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500; */
 }
 
 .nav-links {
     color: #aeb7cc;
 
     text-decoration: none;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
 
-    font-size: 15px;
-
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
-.nav-links :hover,
-.nav-links :active {
-    color: #8b7cff;
+.nav-links:hover{
+    color: #a57cff;
+    text-decoration: underline solid #b999fe 2.5px;
+    /* text-decoration: underline solid #7ceeff 2.5px; */
+    /* text-decoration-color: #7ceeff; */
 }
 
-.nav-links i {
-    margin-right: 6px;
-}
+
+/* Profile button */
 
 .profile-btn {
+    padding: 11px 20px;
+
     background: transparent;
-    border: 1px solid #30374d;
+
     color: white;
 
-    padding: 11px 18px;
+    border: 1px solid #28344e;
+
     border-radius: 10px;
 
     cursor: pointer;
 }
 
+.profile-btn:hover {
+    border-color: #6655ff;
+    background: #121832;
+}
 
 /* ================= CONTAINER ================= */
 

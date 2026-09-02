@@ -145,6 +145,10 @@ ul {
     cursor: pointer;
 }
 
+.profile-btn:hover {
+    border-color: #6655ff;
+    background: #121832;
+}
 
 /* ==============================
    HERO
