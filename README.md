@@ -564,7 +564,7 @@ Click **Fork** at the top of the PSI GitHub repository. This creates your own co
 **2. Clone your fork**
 
 ```bash
-git clone https://github.com/<your-username>/PSI---Problem-Solving-Intelligence-.git
+git clone https://github.com/Vayun-Dodiya/PSI---Problem-Solving-Intelligence-.git
 cd PSI---Problem-Solving-Intelligence-
 ```
 
