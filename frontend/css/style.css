@@ -1,3 +1,5 @@
+/* Main html formation */
+
 * {
     margin: 0;
     padding: 0;
@@ -37,38 +39,30 @@ ul {
     color: #010E1D;
 }
 
-/* ==============================
-   NAVBAR
-================================ */
+
+/* -- # ----- NAVBAR --------------------------------------------- */
 
 .navbar {
     height: 72px;
-
     width: 100%;
 
     padding: 18px 6%;
 
     display: flex;
-
     position: fixed;
-
     justify-content: space-between;
-
     align-items: center;
-
     
     background: rgba(8, 13, 29, 0.75);
-
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(12px);
-
     border-bottom: 1px solid rgba(139, 124, 255, 0.15);
 
     z-index: 1000;
 
 }
 
-/* Brand */
+/* Navbar Parts  */
 
 .nav-left {
     display: flex;
@@ -106,16 +100,12 @@ ul {
     flex-shrink: 0;
 }
 
-/* Navigation */
+/* Navigation links */
 
 .nav-opt {
     display: flex;
     gap: 3rem;
     align-items: center;
-
-    /* font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 500; */
 }
 
 .nav-links {
@@ -195,9 +185,7 @@ ul {
     background: #121832;
 }
 
-/* ==============================
-   HERO
-================================ */
+/* -- # ----- HERO SECTION --------------------------------------------- */
 
 .hero {
     padding:80px;
@@ -226,17 +214,14 @@ ul {
 
 .badge {
     display: inline-block;
-
     padding: 9px 18px;
 
     border-radius: 30px;
 
     background: rgba(103, 76, 255, 0.15);
-
     color: #a78bfa;
 
     font-size: 13px;
-
     margin-bottom: 20px;
 }
 
@@ -245,9 +230,7 @@ ul {
 
 .hero h1 {
     font-size: 55px;
-
     line-height: 1.15;
-
     margin-bottom: 20px;
 }
 
@@ -266,7 +249,6 @@ ul {
 
 .hero-description {
     max-width: 760px;
-
     margin: auto;
 
     color: #9da8bd;
@@ -275,23 +257,17 @@ ul {
 }
 
 
-/* ==============================
-   PROBLEM CARD
-================================ */
+
+/* -- # ----- PROBLEM CARD --------------------------------------------- */
 
 .problem-card {
     max-width: 1050px;
-
     margin: 45px auto 0;
-
     padding: 25px;
 
     background: #0b1222;
-
     border: 1px solid #26324d;
-
     border-radius: 15px;
-
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.35);
 }
@@ -301,39 +277,27 @@ ul {
 
 .problem-header {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-bottom: 20px;
 }
 
 .problem-title {
     display: flex;
-
     gap: 15px;
-
     align-items: center;
 }
 
 .problem-icon {
     width: 42px;
-
     height: 42px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     border-radius: 10px;
 
     background: rgba(112, 72, 255, 0.15);
-
     color: #8b6cff;
-
     font-size: 22px;
 }
 
@@ -352,27 +316,18 @@ ul {
 
 .ai-ready {
     padding: 8px 15px;
-
     border-radius: 20px;
-
     background: rgba(34, 197, 94, 0.08);
-
     color: #55d987;
-
     font-size: 12px;
 }
 
 .ai-ready span {
     display: inline-block;
-
     width: 7px;
-
     height: 7px;
-
     background: #22c55e;
-
     border-radius: 50%;
-
     margin-right: 5px;
 }
 
@@ -402,79 +357,42 @@ ul {
 
 textarea {
     width: 100%;
-
     resize: vertical;
-
     padding: 18px;
-
     background: #080e1b;
-
     color: white;
-
     border: 1px solid #293650;
-
     border-radius: 10px;
-
     outline: none;
-
     font-size: 14px;
-
     min-height: 52px;
     max-height: 180px;
-
     padding: 14px 16px;
-
-    /* resize: none; */
-    /* overflow-y: auto; */
-
-    /* border: none; */
-    /* outline: none; */
-
-    /* background: transparent; */
-
-    /* font-family: inherit; */
-    /* font-size: 16px; */
-    /* line-height: 1.5; */
-
-    /* box-sizing: border-box; */
-
 }
 
 .promptInput:focus {
     border-color: #765cff;
 }
 
-/* form stat */
-
-/* to end  */
 /* ==============================
    OPTIONS
 ================================ */
 
 .options {
     display: grid;
-
     grid-template-columns:
         repeat(3, 1fr);
-
     gap: 15px;
-
     margin-top: 18px;
 }
 
 .option-box {
     display: flex;
-
     align-items: center;
-
     gap: 12px;
-
     padding: 15px;
-
     border: 1px solid #293650;
-
     border-radius: 10px;
-
     background: #080e1b;
 }
 
@@ -484,9 +402,7 @@ textarea {
 
 .option-box small {
     display: block;
-
     color: #778299;
-
     font-size: 11px;
 }
 
@@ -496,7 +412,6 @@ textarea {
 
 .arrow {
     margin-left: auto;
-
     color: #8d97aa;
 }
 
@@ -507,17 +422,13 @@ textarea {
 
 .problem-footer {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-top: 20px;
 }
 
 .problem-footer p {
     color: #778299;
-
     font-size: 12px;
 }
 
@@ -526,26 +437,17 @@ textarea {
 
 .analyze-btn {
     display: inline-flex;
-
     align-items: center;
-
     gap: 20px;
-
     padding: 13px 25px;
-
     background:
         linear-gradient(90deg,
             #315cff,
             #7b2cff);
-
     color: white;
-
     text-decoration: none;
-
     border-radius: 9px;
-
     font-weight: bold;
-
     font-size: 14px;
 }
 
@@ -556,29 +458,23 @@ textarea {
 
 .how-it-works {
     padding: 80px 7%;
-
     background: #070c18;
 }
 
 .section-heading {
     text-align: center;
-
     margin-bottom: 45px;
 }
 
 .section-heading>p {
     color: #8b6cff;
-
     font-size: 12px;
-
     font-weight: bold;
-
     letter-spacing: 2px;
 }
 
 .section-heading h2 {
     font-size: 32px;
-
     margin: 8px 0;
 }
 
@@ -595,49 +491,31 @@ textarea {
 
 .steps {
     max-width: 1250px;
-
     margin: auto;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 12px;
 }
 
 .step-card {
     flex: 1;
-
     min-height: 150px;
-
     display: flex;
-
     gap: 15px;
-
     padding: 20px;
-
     border: 1px solid #27334b;
-
     border-radius: 12px;
-
     background: #0b1221;
 }
 
 .step-icon {
     min-width: 50px;
-
     height: 50px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 10px;
-
     font-size: 23px;
 }
 
@@ -659,19 +537,16 @@ textarea {
 
 .step-card h3 {
     font-size: 14px;
-
     margin-bottom: 8px;
 }
 
 .step-card p {
     color: #7f8aa0;
-
     font-size: 12px;
 }
 
 .arrow-line {
     color: #645aff;
-
     font-size: 24px;
 }
 
@@ -682,21 +557,13 @@ textarea {
 
 .cta {
     max-width: 1250px;
-
     margin: 0 auto 60px;
-
     padding: 25px 35px;
-
     display: flex;
-
     align-items: center;
-
     gap: 25px;
-
     border: 1px solid #4038a0;
-
     border-radius: 12px;
-
     background:
         linear-gradient(100deg,
             #21186d,
@@ -717,26 +584,19 @@ textarea {
 
 .cta p {
     color: #a3a9c1;
-
     font-size: 13px;
 }
 
 .cta-btn {
     padding: 13px 25px;
-
     background:
         linear-gradient(90deg,
             #315cff,
             #7b2cff);
-
     color: white;
-
     text-decoration: none;
-
     border-radius: 8px;
-
     font-size: 13px;
-
     font-weight: bold;
 }
 
@@ -747,37 +607,26 @@ textarea {
 
 footer {
     padding: 45px 8% 20px;
-
     background: #040711;
-
     border-top: 1px solid #1c2740;
 }
 
 .footer-brand {
     display: flex;
-
     gap: 15px;
-
     align-items: center;
 }
 
 .footer-logo {
     width: 45px;
-
     height: 45px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 10px;
-
     background: linear-gradient(135deg,
             #315cff,
             #7b2cff);
-
     font-weight: bold;
 }
 
@@ -787,17 +636,13 @@ footer {
 
 .footer-brand p {
     color: #707b92;
-
     font-size: 12px;
 }
 
 .footer-links {
     display: flex;
-
     justify-content: flex-end;
-
     gap: 100px;
-
     margin-top: -40px;
 }
 
@@ -807,53 +652,35 @@ footer {
 
 .footer-links a {
     display: block;
-
     color: #7e899f;
-
     text-decoration: none;
-
     font-size: 13px;
-
     margin-bottom: 5px;
 }
 
 .social-icons {
     display: flex;
-
     gap: 10px;
 }
 
 .social-icons span {
     width: 35px;
-
     height: 35px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     border-radius: 50%;
-
     background: #111a2d;
-
     color: #b5bfd3;
-
     font-size: 11px;
 }
 
 .copyright {
     text-align: center;
-
     margin-top: 40px;
-
     padding-top: 20px;
-
     border-top: 1px solid #182238;
-
     color: #626d83;
-
     font-size: 12px;
 }
 
@@ -890,9 +717,7 @@ footer {
 
     .footer-links {
         margin-top: 30px;
-
         justify-content: flex-start;
-
         gap: 50px;
     }
 }
@@ -902,13 +727,11 @@ footer {
 
     .navbar {
         flex-direction: column;
-
         gap: 20px;
     }
 
     .nav-links {
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
@@ -922,17 +745,13 @@ footer {
 
     .problem-footer {
         flex-direction: column;
-
         gap: 15px;
-
         align-items: flex-start;
     }
 
     .cta {
         margin: 30px 20px;
-
         flex-direction: column;
-
         align-items: flex-start;
     }
 }
