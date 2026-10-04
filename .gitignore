@@ -127,3 +127,7 @@ out/
 .PSI/
 __pycache__/
 *.pyc
+
+
+
+color_template.txt
