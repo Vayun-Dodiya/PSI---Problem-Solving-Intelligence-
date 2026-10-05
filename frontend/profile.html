@@ -1,233 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Profile | PSI</title>
-    <link rel="icon" type="image/png" href="/static/assets/icons/PSI-ICON.png">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Profile CSS -->
-    <link rel="stylesheet" href="/static/css/profile.css">
-    <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PSI Profile — learning progress, activity, and skill preferences." />
+  <title>Profile — PSI</title>
+  <link rel="icon" href="" type="image/png" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/profile.css" />
 </head>
-
-<body>
-
-<nav class="navbar">
-
-        <a href="/" class="nav-left">
-            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo" class="logo">
-            <div>
-                <span>Problem Solving Intelligence</span>
-                <p style="font-size: 12.5px;letter-spacing: 1px; font-weight: normal; line-height: 11px; color: rgb(159, 159, 159);">
-                    Think Better. Solve Smarter.
-                </p>
-            </div>
+<body data-page="profile">
+  <div class="page">
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a class="navbar__brand" href="/" aria-label="PSI home">
+          <img class="navbar__logo" src="/static/assets/icons/PSI-ICON.png" alt="" width="32" height="32" />
+          <span class="navbar__wordmark">PSI</span>
         </a>
 
+        <nav class="navbar__nav" id="primary-nav" aria-label="Primary">
+          <a class="navbar__link" data-nav="home" href="/">Home</a>
+          <a class="navbar__link" data-nav="analyze" href="/analyze">Analyze</a>
+          <a class="navbar__link" data-nav="profile" href="/profile">Profile</a>
+        </nav>
 
-        <div class="nav-right">
-            <ul class="nav-opt">
-                <li>
-
-                    <a href="/" class="nav-links">
-                        Home
-                    </a>
-                </li>
-                <li>
-
-                    <a href="/analyze" class="nav-links">
-                        Analyze
-                    </a>
-                </li>
-                <li>
-
-
-                    <a href="/profile" class="nav-links-active nav-links">
-                        Profile
-                    </a>
-                </li>
-                <li>
-
-
-                    <button class="profile-btn">
-                        👤 My Profile
-                    </button>
-
-                </li>
-            </ul>
+        <div class="navbar__actions">
+          <a class="btn btn--ghost btn--sm" href="/profile">My Profile</a>
+          <a class="btn btn--primary btn--sm" href="/analyze">Analyze</a>
+          <button class="navbar__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="navbar__toggle-icon" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+          </button>
         </div>
+      </div>
+    </header>
 
-    </nav>
-
-
-    <!-- ================= PROFILE ================= -->
-
-    <main class="profile-container">
-
-        <section class="profile-header">
-
-            <div class="profile-icon">
-                <i class="fa-solid fa-user"></i>
-            </div>
-
-            <div>
-                <span class="small-title">YOUR PROFILE</span>
-
-                <h1>
-                    Welcome to
-                    <span>PSI.</span>
-                </h1>
-
-                <p>
-                    Manage your profile and personalize your
-                    problem-solving experience.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- ================= PROFILE CARD ================= -->
-
-        <section class="profile-card">
-
-            <div class="card-title">
-                <i class="fa-solid fa-id-card"></i>
-
-                <div>
-                    <h2>Profile Information</h2>
-                    <p>Your personal information</p>
-                </div>
-            </div>
-
-
-            <div class="profile-grid">
-
-                <div class="input-box">
-
-                    <label>
-                        <i class="fa-solid fa-user"></i>
-                        Full Name
-                    </label>
-
-                    <input type="text" placeholder="Enter your name">
-
-                </div>
-
-
-                <div class="input-box">
-
-                    <label>
-                        <i class="fa-solid fa-envelope"></i>
-                        Email Address
-                    </label>
-
-                    <input type="email" placeholder="Enter your email">
-
-                </div>
-
-
-                <div class="input-box">
-
-                    <label>
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        Skill Level
-                    </label>
-
-                    <select>
-                        <option>Beginner</option>
-                        <option>Intermediate</option>
-                        <option>Advanced</option>
-                    </select>
-
-                </div>
-
-
-                <div class="input-box">
-
-                    <label>
-                        <i class="fa-solid fa-code"></i>
-                        Main Interest
-                    </label>
-
-                    <select>
-                        <option>Problem Solving</option>
-                        <option>Programming</option>
-                        <option>Algorithms</option>
-                        <option>Data Structures</option>
-                    </select>
-
-                </div>
-
-            </div>
-
-
-            <button class="save-btn">
-                <i class="fa-solid fa-floppy-disk"></i>
-                Save Profile
-            </button>
-
-        </section>
-
-
-        <!-- ================= STATS ================= -->
-
-        <section class="stats">
-
-            <div class="stat-card">
-
-                <div class="stat-icon purple">
-                    <i class="fa-solid fa-brain"></i>
-                </div>
-
-                <div>
-                    <h3>0</h3>
-                    <p>Problems Analyzed</p>
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon blue">
-                    <i class="fa-solid fa-lightbulb"></i>
-                </div>
-
-                <div>
-                    <h3>0</h3>
-                    <p>Solutions Explored</p>
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon green">
-                    <i class="fa-solid fa-bullseye"></i>
-                </div>
-
-                <div>
-                    <h3>0</h3>
-                    <p>Problems Solved</p>
-                </div>
-
-            </div>
-
-        </section>
-
+    <main class="page__main">
+      <div class="profile">
+        <div class="container" id="profile-root">
+          <!-- Rendered by profile.js -->
+        </div>
+      </div>
     </main>
 
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo-row">
+            <img class="footer__logo" src="/static/assets/icons/PSI-ICON.png" alt="" width="28" height="28" />
+            <span class="footer__name">PSI</span>
+          </div>
+          <p class="footer__tagline">Think Better. Solve Smarter.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a class="footer__link" href="/">Home</a>
+          <a class="footer__link" href="/analyze">Analyze</a>
+          <a class="footer__link" href="/profile">Profile</a>
+        </nav>
+        <div class="footer__bottom">
+          <span>© <span data-year></span> PSI — Problem Solving Intelligence</span>
+          <span class="text-mono">V3</span>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-    <script src="/static/js/profile.js"></script>
-
+  <!-- Dev preview with sample data: /profile?mock=1 -->
+  <script src="/static/js/config.js"></script>
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/ui.js"></script>
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/profile.js"></script>
 </body>
-
 </html>

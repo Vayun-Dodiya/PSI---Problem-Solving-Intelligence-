@@ -1,404 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Analyze Problem | PSI</title>
-    <link rel="icon" type="image/png" href="/static/assets/icons/PSI-ICON.png">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Analyze CSS -->
-    <link rel="stylesheet" href="/static/css/analyze.css">
-    <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PSI Analyze — structured problem-solving workspace for code and reasoning." />
+  <title>Analyze — PSI</title>
+  <link rel="icon" href="/static/assets/icons/PSI-ICON.png" type="image/png" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/analyze.css" />
 </head>
-
-<body>
-
-   <!-- ================= NAVBAR ================= -->
-
-<nav class="navbar">
-
-        <a href="/" class="nav-left">
-            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo" class="logo">
-            <div>
-                <span>Problem Solving Intelligence</span>
-                <p style="font-size: 12.5px;letter-spacing: 1px; font-weight: normal; line-height: 11px; color: rgb(159, 159, 159);">
-                    Think Better. Solve Smarter.
-                </p>
-            </div>
+<body data-page="analyze">
+  <div class="page">
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a class="navbar__brand" href="/" aria-label="PSI home">
+          <img class="navbar__logo" src="/static/assets/icons/PSI-ICON.png" alt="" width="32" height="32" />
+          <span class="navbar__wordmark">PSI</span>
         </a>
 
+        <nav class="navbar__nav" id="primary-nav" aria-label="Primary">
+          <a class="navbar__link" data-nav="home" href="/">Home</a>
+          <a class="navbar__link" data-nav="analyze" href="/analyze">Analyze</a>
+          <a class="navbar__link" data-nav="profile" href="/profile">Profile</a>
+        </nav>
 
-        <div class="nav-right">
-            <ul class="nav-opt">
-                <li>
-
-                    <a href="/" class="nav-links">
-                        Home
-                    </a>
-                </li>
-                <li>
-
-                    <a href="/analyze" class="nav-links-active nav-links">
-                        Analyze
-                    </a>
-                </li>
-                <li>
-
-
-                    <a href="/profile" class="nav-links">
-                        Profile
-                    </a>
-                </li>
-                <li>
-
-
-                    <button class="profile-btn">
-                        👤 My Profile
-                    </button>
-
-                </li>
-            </ul>
+        <div class="navbar__actions">
+          <a class="btn btn--ghost btn--sm" href="/profile">My Profile</a>
+          <button class="navbar__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="navbar__toggle-icon" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+          </button>
         </div>
+      </div>
+    </header>
 
-    </nav>
-
-
-    <!-- ================= MAIN ================= -->
-
-    <main class="container">
-
-        <!-- Page Heading -->
-
-        <section class="page-heading">
-
-            <div class="analysis-icon">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <main class="page__main">
+      <div class="workspace">
+        <div class="container container--wide">
+          <header class="workspace__header">
+            <div class="workspace__title-group">
+              <h1 class="workspace__title">Analyze</h1>
+              <p class="workspace__subtitle">
+                Structured workspace — not a chat thread. Submit a problem and walk the pipeline.
+              </p>
             </div>
-
-            <div>
-                <p class="small-title">AI PROBLEM ANALYSIS</p>
-
-                <h1>
-                    Understand Your
-                    <span>Problem.</span>
-                </h1>
-
-                <p class="description">
-                    PSI analyzes your problem, breaks it down,
-                    evaluates possible approaches, and creates
-                    a practical action plan.
-                </p>
+            <div class="flow-strip" id="flow-strip" aria-label="Analysis flow">
+              <span class="flow-strip__item is-active" data-flow="input">Input</span>
+              <span class="flow-strip__sep" aria-hidden="true">→</span>
+              <span class="flow-strip__item" data-flow="thinking">Thinking</span>
+              <span class="flow-strip__sep" aria-hidden="true">→</span>
+              <span class="flow-strip__item" data-flow="solution">Solution</span>
             </div>
-
-        </section>
-
-
-        <!-- ================= PROBLEM CARD ================= -->
-
-        <section class="problem-card">
-
-            <div class="card-header">
-
-                <div class="title-icon">
-                    <i class="fa-solid fa-file-lines"></i>
-                </div>
-
-                <div>
-                    <h2>Your Problem</h2>
-                    <p>The problem you want PSI to analyze</p>
-                </div>
-
-                <span class="status">
-                    <i class="fa-solid fa-circle"></i>
-                    Analyzing
-                </span>
-
-            </div>
-
-
-            <div class="problem-box">
-
-                <p id="problemText">
-                    I want to build a student attendance system
-                    for my college. I have limited time and only
-                    know Python.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= PROBLEM DETAILS ================= -->
-
-        <section class="details-grid">
-
-            <div class="detail-card">
-
-                <div class="detail-icon goal">
-                    <i class="fa-solid fa-bullseye"></i>
-                </div>
-
-                <div>
-                    <span>GOAL</span>
-                    <h3>Build an attendance system</h3>
-                </div>
-
-            </div>
-
-
-            <div class="detail-card">
-
-                <div class="detail-icon time">
-                    <i class="fa-regular fa-clock"></i>
-                </div>
-
-                <div>
-                    <span>TIME CONSTRAINT</span>
-                    <h3>Limited time</h3>
-                </div>
-
-            </div>
-
-
-            <div class="detail-card">
-
-                <div class="detail-icon skill">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-
-                <div>
-                    <span>SKILL LEVEL</span>
-                    <h3>Beginner</h3>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= AI ANALYSIS ================= -->
-
-        <section class="analysis-section">
-
-            <div class="section-title">
-
-                <span>
-                    <i class="fa-solid fa-brain"></i>
-                </span>
-
-                <div>
-                    <p>PSI THINKING PROCESS</p>
-                    <h2>AI Analysis</h2>
-                </div>
-
-            </div>
-
-
-            <!-- STEP 1 -->
-
-            <div class="analysis-card">
-
-                <div class="step-number">01</div>
-
-                <div class="step-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-
-                <div class="step-content">
-
-                    <span>UNDERSTAND</span>
-
-                    <h3>
-                        Understanding the Problem
-                    </h3>
-
-                    <p>
-                        The main goal is to create a student
-                        attendance system that can record,
-                        manage, and track student attendance.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- STEP 2 -->
-
-            <div class="analysis-card">
-
-                <div class="step-number">02</div>
-
-                <div class="step-icon">
-                    <i class="fa-solid fa-puzzle-piece"></i>
-                </div>
-
-                <div class="step-content">
-
-                    <span>DECOMPOSE</span>
-
-                    <h3>
-                        Breaking the Problem Down
-                    </h3>
-
-                    <p>
-                        The problem can be divided into smaller
-                        tasks such as student management,
-                        attendance recording, database storage,
-                        and report generation.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- STEP 3 -->
-
-            <div class="analysis-card">
-
-                <div class="step-number">03</div>
-
-                <div class="step-icon">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </div>
-
-                <div class="step-content">
-
-                    <span>EVALUATE</span>
-
-                    <h3>
-                        Possible Approaches
-                    </h3>
-
-                    <div class="approaches">
-
-                        <div class="approach">
-                            <strong>Approach 1</strong>
-                            <p>Python + SQLite</p>
-                            <small>Simple and beginner friendly</small>
-                        </div>
-
-                        <div class="approach">
-                            <strong>Approach 2</strong>
-                            <p>Python + Web Interface</p>
-                            <small>More flexible and scalable</small>
-                        </div>
-
+          </header>
+
+          <div class="workspace__layout">
+            <div class="workspace__main">
+              <!-- INPUT -->
+              <section class="panel" aria-labelledby="input-panel-title">
+                <header class="panel__header">
+                  <h2 class="panel__title" id="input-panel-title">Problem input</h2>
+                  <span class="badge">Workspace</span>
+                </header>
+                <div class="panel__body">
+                  <form id="analyze-form" class="input-panel" novalidate>
+                    <div class="field">
+                      <label class="field__label" for="analyze-prompt">Problem / question</label>
+                      <textarea
+                        id="analyze-prompt"
+                        class="textarea textarea--auto"
+                        name="prompt"
+                        rows="4"
+                        maxlength="4000"
+                        placeholder="What are you trying to solve? Include expected behavior and what went wrong."
+                        required
+                        aria-describedby="analyze-char-count"
+                      ></textarea>
+                      <div class="flex justify-between mt-2">
+                        <p class="field__hint">Ctrl/⌘ + Enter to run analysis</p>
+                        <span class="char-count" id="analyze-char-count">0 / 4000</span>
+                      </div>
                     </div>
 
+                    <div class="field">
+                      <div class="flex justify-between items-center mb-4">
+                        <label class="field__label" for="analyze-code">Attempted code</label>
+                        <div class="select" id="language-select" style="width: 160px">
+                          <input type="hidden" name="language" value="python" />
+                          <button
+                            type="button"
+                            class="select__trigger"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-label="Programming language"
+                          >
+                            <span class="select__value">Python</span>
+                            <svg class="select__chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                          <ul class="select__menu" role="listbox">
+                            <li><button type="button" class="select__option is-selected" role="option" data-value="python">Python</button></li>
+                            <li><button type="button" class="select__option" role="option" data-value="c">C</button></li>
+                            <li><button type="button" class="select__option" role="option" data-value="cpp">C++</button></li>
+                            <li><button type="button" class="select__option" role="option" data-value="java">Java</button></li>
+                            <li><button type="button" class="select__option" role="option" data-value="javascript">JavaScript</button></li>
+                            <li><button type="button" class="select__option" role="option" data-value="sql">SQL</button></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="code-editor" data-editor="legacy">
+                        <div class="code-editor__toolbar">
+                          <div class="code-editor__meta">
+                            <div class="code-editor__dots" aria-hidden="true">
+                              <span></span><span></span><span></span>
+                            </div>
+                            <span id="editor-lang-label">python</span>
+                          </div>
+                          <span class="text-xs text-muted text-mono">Monaco-ready container</span>
+                        </div>
+                        <div class="code-editor__body">
+                          <label class="sr-only" for="analyze-code">Code editor</label>
+                          <textarea
+                            id="analyze-code"
+                            class="code-editor__textarea"
+                            name="attempted_code"
+                            spellcheck="false"
+                            placeholder="# Paste your attempted solution here"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="input-panel__actions">
+                      <div class="input-panel__actions-left">
+                        <span class="text-xs text-muted">API-driven · structured response</span>
+                      </div>
+                      <button type="submit" class="btn btn--primary btn--lg" id="analyze-submit">
+                        Analyze Problem
+                      </button>
+                    </div>
+                  </form>
                 </div>
+              </section>
 
-            </div>
-
-
-            <!-- STEP 4 -->
-
-            <div class="analysis-card">
-
-                <div class="step-number">04</div>
-
-                <div class="step-icon">
-                    <i class="fa-solid fa-bullseye"></i>
+              <!-- RESULTS -->
+              <section class="panel results-panel" id="results-panel" aria-labelledby="results-title">
+                <header class="panel__header">
+                  <div class="results-panel__toolbar">
+                    <h2 class="panel__title" id="results-title">Analysis</h2>
+                    <div class="results-meta" id="results-meta"></div>
+                  </div>
+                </header>
+                <div
+                  class="panel__body"
+                  id="analysis-results"
+                  role="region"
+                  aria-live="polite"
+                  aria-relevant="additions text"
+                  aria-busy="false"
+                >
+                  <!-- Filled by JS -->
                 </div>
+              </section>
+            </div>
 
-                <div class="step-content">
-
-                    <span>ACT</span>
-
-                    <h3>
-                        Recommended Action Plan
-                    </h3>
-
-                    <ol class="action-list">
-
-                        <li>
-                            Create the student database.
-                        </li>
-
-                        <li>
-                            Add student registration.
-                        </li>
-
-                        <li>
-                            Build attendance recording.
-                        </li>
-
-                        <li>
-                            Add attendance reports.
-                        </li>
-
-                    </ol>
-
+            <!-- SIDEBAR -->
+            <aside class="workspace__sidebar">
+              <section class="panel panel--elevated">
+                <header class="panel__header">
+                  <h2 class="panel__title">Mode</h2>
+                </header>
+                <div class="panel__body">
+                  <div class="mode-selector" id="mode-selector" role="group" aria-label="Analysis mode">
+                    <!-- Modes rendered from PSI_MODES in analyze.js -->
+                  </div>
                 </div>
+              </section>
 
-            </div>
+              <section class="panel">
+                <header class="panel__header">
+                  <h2 class="panel__title">Context</h2>
+                </header>
+                <div class="panel__body">
+                  <div class="config-group">
+                    <span class="config-group__label" id="analyze-skill-label">Skill level</span>
+                    <div class="segmented" id="analyze-skill" data-name="skill" role="group" aria-labelledby="analyze-skill-label">
+                      <button type="button" class="segmented__btn" data-value="beginner" aria-pressed="false">Beginner</button>
+                      <button type="button" class="segmented__btn is-active" data-value="intermediate" aria-pressed="true">Intermediate</button>
+                      <button type="button" class="segmented__btn" data-value="advanced" aria-pressed="false">Advanced</button>
+                    </div>
+                  </div>
 
-        </section>
+                  <div class="config-group">
+                    <span class="config-group__label" id="analyze-time-label">Time</span>
+                    <div class="segmented" id="analyze-time" data-name="time" role="group" aria-labelledby="analyze-time-label">
+                      <button type="button" class="segmented__btn is-active" data-value="flexible" aria-pressed="true">Flexible</button>
+                      <button type="button" class="segmented__btn" data-value="limited" aria-pressed="false">Limited</button>
+                      <button type="button" class="segmented__btn" data-value="urgent" aria-pressed="false">Urgent</button>
+                    </div>
+                  </div>
 
+                  <div class="config-group">
+                    <span class="config-group__label" id="analyze-budget-label">Budget</span>
+                    <div class="segmented" id="analyze-budget" data-name="budget" role="group" aria-labelledby="analyze-budget-label">
+                      <button type="button" class="segmented__btn is-active" data-value="none" aria-pressed="true">None</button>
+                      <button type="button" class="segmented__btn" data-value="low" aria-pressed="false">Low</button>
+                      <button type="button" class="segmented__btn" data-value="medium" aria-pressed="false">Medium</button>
+                      <button type="button" class="segmented__btn" data-value="high" aria-pressed="false">High</button>
+                    </div>
+                  </div>
 
-        <!-- ================= FINAL RECOMMENDATION ================= -->
-
-        <section class="recommendation">
-
-            <div class="recommendation-icon">
-                <i class="fa-solid fa-lightbulb"></i>
-            </div>
-
-            <div>
-
-                <span>PSI RECOMMENDATION</span>
-
-                <h2>
-                    Start with Python + SQLite
-                </h2>
-
-                <p>
-                    This approach is simple for a beginner,
-                    requires fewer resources, and can be
-                    completed within a limited time.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= BUTTON ================= -->
-
-        <div class="bottom-actions">
-
-            <a href="/" class="secondary-btn">
-                <i class="fa-solid fa-arrow-left"></i>
-                Back Home
-            </a>
-
-            <button class="primary-btn" id="newAnalysisBtn">
-                <i class="fa-solid fa-plus"></i>
-                Start New Analysis
-            </button>
-
+                  <p class="config-note mt-4">
+                    Constraints travel with the request so PSI can tune depth, hints, and recommendations.
+                  </p>
+                </div>
+              </section>
+            </aside>
+          </div>
         </div>
-
+      </div>
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-        © 2026 Problem Solving Intelligence (PSI) • Tech Eximius 2026
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo-row">
+            <img class="footer__logo" src="/static/assets/icons/PSI-ICON.png" alt="" width="28" height="28" />
+            <span class="footer__name">PSI</span>
+          </div>
+          <p class="footer__tagline">Think Better. Solve Smarter.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a class="footer__link" href="/">Home</a>
+          <a class="footer__link" href="/analyze">Analyze</a>
+          <a class="footer__link" href="/profile">Profile</a>
+        </nav>
+        <div class="footer__bottom">
+          <span>© <span data-year></span> PSI — Problem Solving Intelligence</span>
+          <span class="text-mono">V3</span>
+        </div>
+      </div>
     </footer>
+  </div>
 
-
-    <!-- Analyze JavaScript -->
-    <script src="/static/js/analyze.js"></script>
-
+  <!--
+    Optional runtime config (do not hard-code localhost in app code):
+    <script>window.__PSI_CONFIG__ = { apiBaseUrl: 'https://your-api.example.com', useMock: false };</script>
+    Dev preview without backend: open /analyze?mock=1
+  -->
+  <script src="/static/js/config.js"></script>
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/ui.js"></script>
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/analyze.js"></script>
 </body>
-
 </html>

@@ -1,434 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PSI — Problem Solving Intelligence</title>
-
-    <link rel="stylesheet" href="/static/css/style.css">
-     <!-- <link rel="stylesheet" href="/frontend/css/style.css"> -->
-    <link rel="icon" type="image/png" href="/static/assets/icons/PSI-ICON.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PSI — Problem Solving Intelligence. Think Better. Solve Smarter. An AI-powered platform that helps you understand, break down, and solve problems." />
+  <title>PSI — Think Better. Solve Smarter.</title>
+  <link rel="icon" href="/static/assets/icons/PSI-ICON.png" type="image/png" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/home.css" />
 </head>
-
-<body>
-
-
-    <!-- ================= NAVBAR ================= -->
-
-    <nav class="navbar">
-
-        <a href="/" class="nav-left">
-            <img src="/static/assets/icons/PSI-LOGO-MAIN.png" alt="PSI Logo" class="logo">
-            <div>
-                <span>Problem Solving Intelligence</span>
-                <p
-                    style="font-size: 12.5px;letter-spacing: 1px; font-weight: normal; line-height: 11px; color: rgb(159, 159, 159);">
-                    Think Better. Solve Smarter.
-                </p>
-            </div>
+<body data-page="home">
+  <div class="page">
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a class="navbar__brand" href="/" aria-label="PSI home">
+          <img class="navbar__logo" src="/static/assets/icons/PSI-ICON.png" alt="" width="32" height="32" />
+          <span class="navbar__wordmark">PSI</span>
         </a>
 
+        <nav class="navbar__nav" id="primary-nav" aria-label="Primary">
+          <a class="navbar__link" data-nav="home" href="/">Home</a>
+          <a class="navbar__link" data-nav="analyze" href="/analyze">Analyze</a>
+          <a class="navbar__link" data-nav="profile" href="/profile">Profile</a>
+        </nav>
 
-        <div class="nav-right">
-            <ul class="nav-opt">
-                <li>
-
-                    <a href="/" class="nav-links-active nav-links">
-                        Home
-                    </a>
-                </li>
-                <li>
-
-                    <a href="/analyze" class="nav-links">
-                        Analyze
-                    </a>
-                </li>
-                <li>
-
-
-                    <a href="/profile" class="nav-links">
-                        Profile
-                    </a>
-                </li>
-                <li>
-
-
-                    <button class="profile-btn">
-                        👤 My Profile
-                    </button>
-
-                </li>
-            </ul>
+        <div class="navbar__actions">
+          <a class="btn btn--ghost btn--sm" href="/profile">My Profile</a>
+          <a class="btn btn--primary btn--sm" href="/analyze">Analyze</a>
+          <button class="navbar__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="navbar__toggle-icon" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+          </button>
         </div>
+      </div>
+    </header>
 
-    </nav>
+    <main class="page__main">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__intro">
+            <p class="hero__eyebrow">
+              <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+              Problem Solving Intelligence
+            </p>
+            <h1 class="hero__title">Think Better. Solve Smarter.</h1>
+            <p class="hero__subtitle">
+              PSI helps you understand the problem, break it down, evaluate approaches,
+              and build a solution — not just paste an answer.
+            </p>
+            <div class="pipeline hero__pipeline" aria-label="PSI workflow">
+              <span class="pipeline__step is-active"><span class="pipeline__dot"></span>Problem</span>
+              <span class="pipeline__arrow" aria-hidden="true">→</span>
+              <span class="pipeline__step"><span class="pipeline__dot"></span>Thinking</span>
+              <span class="pipeline__arrow" aria-hidden="true">→</span>
+              <span class="pipeline__step"><span class="pipeline__dot"></span>Solution</span>
+            </div>
+          </div>
 
-
-
-    <!-- ================= HERO SECTION ================= -->
-
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <div class="badge">
-                    ✨ AI-Powered Problem Solving
-                </div>
-
-                <h1>
-                    More Than Just Solving.
-                    <BR>Learn How to <SPAN> Think.</SPAN>
-                </h1>
-
-                <p class="hero-description">
-                    Describe your problem and PSI will understand it,
-                    break it down, explore possible approaches,
-                    compare them, and create an actionable plan.
-                </p>
-
+          <form class="problem-workspace" id="hero-problem-form" novalidate>
+            <div class="problem-workspace__header">
+              <span class="problem-workspace__label">Start a reasoning workflow</span>
+              <span class="badge badge--primary">Live input</span>
             </div>
 
+            <div class="problem-workspace__body">
+              <div class="field">
+                <label class="field__label" for="hero-problem">Describe your problem</label>
+                <textarea
+                  id="hero-problem"
+                  class="textarea textarea--auto problem-workspace__textarea"
+                  name="prompt"
+                  rows="5"
+                  maxlength="4000"
+                  placeholder="e.g. My Python function should return the max of two numbers, but the tests keep failing…"
+                  required
+                  aria-describedby="hero-char-count hero-hint"
+                ></textarea>
+                <div class="flex justify-between items-center mt-2">
+                  <p class="field__hint" id="hero-hint">Ctrl/⌘ + Enter to analyze</p>
+                  <span class="char-count" id="hero-char-count">0 / 4000</span>
+                </div>
+              </div>
 
-            <!-- Problem Input Card -->
-
-            <div class="problem-card">
-
-                <div class="problem-header">
-
-                    <div class="problem-title">
-
-                        <div class="problem-icon">
-                            ✎
-                        </div>
-
-                        <div>
-                            <h3>
-                                What problem are you trying to solve?
-                            </h3>
-
-                            <p>
-                                Describe your problem naturally.
-                                No special format required.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="ai-ready">
-                        <span></span>
-                        AI Ready
-                    </div>
-
+              <div class="problem-workspace__constraints">
+                <div class="field">
+                  <span class="field__label" id="hero-skill-label">Skill level</span>
+                  <div class="segmented" id="hero-skill" data-name="skill" role="group" aria-labelledby="hero-skill-label">
+                    <button type="button" class="segmented__btn" data-value="beginner" aria-pressed="false">Beginner</button>
+                    <button type="button" class="segmented__btn is-active" data-value="intermediate" aria-pressed="true">Intermediate</button>
+                    <button type="button" class="segmented__btn" data-value="advanced" aria-pressed="false">Advanced</button>
+                  </div>
                 </div>
 
-
-                <!-- <input placeholder="Example: I want to build a student attendance system for my college. I have limited time and only know Python..." class="problem-input"></input> -->
-                <input 
-                type="text" class="promptInput" name="problem-input" id="prompt" placeholder="I want to solve the...">
-
-
-                <!-- Options -->
-
-                <div class="options">
-
-                    <div class="option-box">
-
-                        <div class="option-icon">
-                            🎓
-                        </div>
-
-                        <div>
-                            <small>Skill Level</small>
-                            <strong>Beginner</strong>
-                        </div>
-
-                        <span class="arrow">⌄</span>
-
-                    </div>
-
-
-                    <div class="option-box">
-
-                        <div class="option-icon">
-                            ◷
-                        </div>
-
-                        <div>
-                            <small>Time Constraint</small>
-                            <strong>Not specified</strong>
-                        </div>
-
-                        <span class="arrow">⌄</span>
-
-                    </div>
-
-
-                    <div class="option-box">
-
-                        <div class="option-icon">
-                            💼
-                        </div>
-
-                        <div>
-                            <small>Budget</small>
-                            <strong>Not specified</strong>
-                        </div>
-
-                        <span class="arrow">⌄</span>
-
-                    </div>
-
+                <div class="field">
+                  <span class="field__label" id="hero-time-label">Time constraint</span>
+                  <div class="segmented" id="hero-time" data-name="time" role="group" aria-labelledby="hero-time-label">
+                    <button type="button" class="segmented__btn is-active" data-value="flexible" aria-pressed="true">Flexible</button>
+                    <button type="button" class="segmented__btn" data-value="limited" aria-pressed="false">Limited</button>
+                    <button type="button" class="segmented__btn" data-value="urgent" aria-pressed="false">Urgent</button>
+                  </div>
                 </div>
 
-
-                <!-- Bottom of Card -->
-
-                <div class="problem-footer">
-
-                    <p>
-                        🔒 Your problem stays private and secure.
-                    </p>
-
-                    <a href="/analyze" class="analyze-btn">
-                        ✨ Analyze Problem
-                        <span>→</span>
-                    </a>
-
+                <div class="field">
+                  <span class="field__label" id="hero-budget-label">Budget</span>
+                  <div class="segmented" id="hero-budget" data-name="budget" role="group" aria-labelledby="hero-budget-label">
+                    <button type="button" class="segmented__btn is-active" data-value="none" aria-pressed="true">None</button>
+                    <button type="button" class="segmented__btn" data-value="low" aria-pressed="false">Low</button>
+                    <button type="button" class="segmented__btn" data-value="medium" aria-pressed="false">Medium</button>
+                    <button type="button" class="segmented__btn" data-value="high" aria-pressed="false">High</button>
+                  </div>
                 </div>
+              </div>
 
+              <div class="problem-workspace__footer">
+                <div class="problem-workspace__meta">
+                  <span class="text-xs text-muted text-mono">Problem → Thinking → Solution</span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg" id="hero-analyze-btn">
+                  Analyze Problem
+                </button>
+              </div>
             </div>
+          </form>
+        </div>
+      </section>
 
-        </section>
+      <!-- HOW PSI WORKS -->
+      <section class="section section--alt" id="how">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">How PSI works</p>
+            <h2 class="section__title">A structured path through every problem</h2>
+            <p class="section__desc">
+              PSI turns messy questions into a clear pipeline — so you learn the reasoning,
+              not just the final answer.
+            </p>
+          </header>
 
+          <div class="how-pipeline">
+            <article class="how-step">
+              <div class="how-step__num">01</div>
+              <div class="how-step__content">
+                <h3 class="how-step__title">Understand</h3>
+                <p class="how-step__text">PSI identifies what the problem actually asks — intent, domain, and success criteria.</p>
+              </div>
+            </article>
+            <article class="how-step">
+              <div class="how-step__num">02</div>
+              <div class="how-step__content">
+                <h3 class="how-step__title">Decompose</h3>
+                <p class="how-step__text">The problem is broken into manageable components you can reason about one at a time.</p>
+              </div>
+            </article>
+            <article class="how-step">
+              <div class="how-step__num">03</div>
+              <div class="how-step__content">
+                <h3 class="how-step__title">Evaluate</h3>
+                <p class="how-step__text">Possible approaches are weighed against your constraints, skill level, and goals.</p>
+              </div>
+            </article>
+            <article class="how-step">
+              <div class="how-step__num">04</div>
+              <div class="how-step__content">
+                <h3 class="how-step__title">Act</h3>
+                <p class="how-step__text">You get a practical recommendation, hints, and next steps — ready to execute.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- ================= HOW PSI WORKS ================= -->
+      <!-- NOT A CHATBOT -->
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">Why PSI is different</p>
+            <h2 class="section__title">Built for thinking — not chatting</h2>
+            <p class="section__desc">
+              Generic assistants optimize for an answer. PSI optimizes for understanding.
+            </p>
+          </header>
 
-        <section class="how-it-works">
-
-            <div class="section-heading">
-
-                <p>HOW PSI WORKS</p>
-
-                <h2>
-                    From Problem to <span>Action.</span>
-                </h2>
-
-                <small>
-                    PSI follows a structured problem-solving process
-                    instead of simply giving you a generic answer.
-                </small>
-
+          <div class="diff-grid">
+            <div class="diff-card diff-card--muted">
+              <p class="diff-card__label">Typical AI chatbot</p>
+              <h3 class="diff-card__title">Answer first</h3>
+              <ul class="diff-card__list">
+                <li>Drops a finished solution quickly</li>
+                <li>Weak on constraints and tradeoffs</li>
+                <li>Easy to copy without learning</li>
+                <li>Feels like a message thread</li>
+              </ul>
             </div>
-
-
-            <div class="steps">
-
-                <!-- Step 1 -->
-
-                <div class="step-card">
-
-                    <div class="step-icon purple">
-                        🔍
-                    </div>
-
-                    <div>
-                        <h3>1. Understand</h3>
-
-                        <p>
-                            Identify the real problem, goal,
-                            constraints, assumptions and missing information.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="arrow-line">
-                    →
-                </div>
-
-
-                <!-- Step 2 -->
-
-                <div class="step-card">
-
-                    <div class="step-icon green">
-                        🧩
-                    </div>
-
-                    <div>
-                        <h3>2. Decompose</h3>
-
-                        <p>
-                            Break a complex problem into smaller,
-                            manageable tasks and dependencies.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="arrow-line">
-                    →
-                </div>
-
-
-                <!-- Step 3 -->
-
-                <div class="step-card">
-
-                    <div class="step-icon yellow">
-                        ⚖
-                    </div>
-
-                    <div>
-                        <h3>3. Evaluate</h3>
-
-                        <p>
-                            Generate multiple approaches and compare
-                            them using meaningful criteria.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="arrow-line">
-                    →
-                </div>
-
-
-                <!-- Step 4 -->
-
-                <div class="step-card">
-
-                    <div class="step-icon blue">
-                        🎯
-                    </div>
-
-                    <div>
-                        <h3>4. Act</h3>
-
-                        <p>
-                            Select the best approach and turn it into
-                            a practical step-by-step action plan.
-                        </p>
-                    </div>
-
-                </div>
-
+            <div class="diff-card diff-card--psi">
+              <p class="diff-card__label">PSI</p>
+              <h3 class="diff-card__title">Problem → Thinking → Solution</h3>
+              <ul class="diff-card__list">
+                <li>Surfaces understanding before code</li>
+                <li>Respects skill, time, and budget</li>
+                <li>Teaches from mistakes and concepts</li>
+                <li>Feels like a reasoning workspace</li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </section>
 
-        </section>
+      <!-- CAPABILITIES -->
+      <section class="section section--alt">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">Capabilities</p>
+            <h2 class="section__title">Modes designed for how you learn</h2>
+            <p class="section__desc">
+              Start with code analysis today. Architecture is ready for more PSI modes tomorrow.
+            </p>
+          </header>
 
+          <div class="cap-grid">
+            <article class="cap-item">
+              <span class="cap-item__index">01</span>
+              <div>
+                <h3 class="cap-item__title">Code Analysis</h3>
+                <p class="cap-item__text">Analyze attempted code, locate mistakes, and explain why they fail.</p>
+              </div>
+            </article>
+            <article class="cap-item">
+              <span class="cap-item__index">02</span>
+              <div>
+                <h3 class="cap-item__title">Learn Through Mistakes</h3>
+                <p class="cap-item__text">Turn errors into concept lessons with progressive hints.</p>
+              </div>
+            </article>
+            <article class="cap-item">
+              <span class="cap-item__index">03</span>
+              <div>
+                <h3 class="cap-item__title">Solution Builder</h3>
+                <p class="cap-item__text">Build structured solutions shaped by your constraints.</p>
+              </div>
+            </article>
+            <article class="cap-item">
+              <span class="cap-item__index">04</span>
+              <div>
+                <h3 class="cap-item__title">Practice & Error Finder</h3>
+                <p class="cap-item__text">Train recognition of common failure patterns before they ship.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- ================= CTA ================= -->
-
-        <section class="cta">
-
-            <div class="rocket">
-                🚀
+      <!-- CTA -->
+      <section class="cta-band">
+        <div class="container">
+          <div class="cta-band__inner">
+            <div class="accent-line" aria-hidden="true"></div>
+            <h2 class="cta-band__title">Open the workspace</h2>
+            <p class="cta-band__text">
+              Bring a problem, some code, and your constraints. PSI will walk the pipeline with you.
+            </p>
+            <div class="cta-band__actions">
+              <a class="btn btn--primary btn--lg" href="/analyze">Go to Analyze</a>
+              <a class="btn btn--outline btn--lg" href="/profile">View Profile</a>
             </div>
-
-            <div>
-
-                <h2>
-                    Ready to solve smarter?
-                </h2>
-
-                <p>
-                    Your problem is the starting point.
-                    Let PSI help you find the path forward.
-                </p>
-
-            </div>
-
-
-            <a href="/analyze" class="cta-btn">
-                Start Solving Now
-                →
-            </a>
-
-        </section>
-
+          </div>
+        </div>
+      </section>
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-brand">
-
-            <div class="footer-logo">
-                PSI
-            </div>
-
-            <div>
-                <h3>Problem Solving Intelligence</h3>
-
-                <p>
-                    AI-powered platform to improve your
-                    problem-solving skills.
-                </p>
-            </div>
-
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo-row">
+            <img class="footer__logo" src="/static/assets/icons/PSI-ICON.png" alt="" width="28" height="28" />
+            <span class="footer__name">PSI</span>
+          </div>
+          <p class="footer__tagline">Think Better. Solve Smarter.</p>
         </div>
-
-        <div class="footer-links">
-
-            <div>
-                <h4>Quick Links</h4>
-
-                <a href="/">🏠Home</a>
-                <a href="/analyze">🔍Analyze</a>
-                <a href="/profile">👤Profile</a>
-            </div>
-
-
-            <div>
-                <h4>Resources</h4>
-
-                <a href="#">⚙️How It Works</a>
-                <a href="#">🧩Practice Problems</a>
-                <a href="#">📚Guides</a>
-                <a href="#">❓FAQ</a>
-            </div>
-
-
-            <div>
-                <h4>Connect</h4>
-
-                <div class="social-icons">
-                    <span>Git</span>
-                    <span>𝕏</span>
-                    <span>in</span>
-                    <span>✉</span>
-                </div>
-            </div>
-
+        <nav class="footer__nav" aria-label="Footer">
+          <a class="footer__link" href="/">Home</a>
+          <a class="footer__link" href="/analyze">Analyze</a>
+          <a class="footer__link" href="/profile">Profile</a>
+        </nav>
+        <div class="footer__bottom">
+          <span>© <span data-year></span> PSI — Problem Solving Intelligence</span>
+          <span class="text-mono">V3</span>
         </div>
-
-
-        <div class="copyright">
-
-            © 2026 Problem Solving Intelligence (PSI)
-            • Tech Eximius 2026
-
-        </div>
-
+      </div>
     </footer>
+  </div>
 
-
-    <!-- JavaScript -->
-
-    <script src="/static/js/main.js"></script>
-
+  <script src="/static/js/config.js"></script>
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/ui.js"></script>
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/home.js"></script>
 </body>
-
 </html>
